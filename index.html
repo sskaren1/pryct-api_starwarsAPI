@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starwars Api</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Redressed&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./build/css/app.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <img src="./build/img/Star_Wars_Logo.png" alt="logo StarWars">
+        </div>
+    </header>
+
+    <section class="search">
+        <div class="search__container">
+            <div class="search__form">
+                <input type="text" placeholder="Ingresa el id del personaje del 1 al 10" class="search__input">
+                <button type="submit" class="search__btn">Buscar</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="card__container">
+            <div class="card__image">
+                <img src="./build/img/5.jpg" alt="personaje StarWars" class="image">
+            </div>
+            <div class="card__body">
+                <h2 class="card__name"></h2>
+                <p class="card__planet"></p>
+                <p class="card__vehicles"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SweetAlert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <!-- JS -->
+    <script src="./build/js/bundle.min.js"></script>
+</body>
+</html>
