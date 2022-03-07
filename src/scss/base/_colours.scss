@@ -1,0 +1,44 @@
+//Colours
+// Color palette - SCSS RGB
+$color-1:rgb(10, 10, 10);
+$color-2: rgba(5,56,53,1);
+$color-3: rgb(77, 244, 140);
+$color-4: rgb(7, 36, 56);
+$color-5:rgb(15, 57, 78);
+$color-6:rgb(44, 111, 154);
+$color-7:rgb(249, 158, 1);
+$color-8:rgb(250, 202, 63);
+$color-9:rgb(207, 214, 221);
+
+// Neutral
+$neutral-1: rgba(0 , 0, 0, 1);
+$neutral-2: rgba(255 , 255, 255, 1);
+$neutral-3: rgba(128, 128, 128, 1);
+
+//gradient
+$gradient-1: $color-6;
+$gradient-2: rgba(44, 111, 154,0.8);
+$gradient-3: rgba(44, 111, 154,0.6);
+$gradient-4: rgba(44, 111, 154,0.3);
+
+//Text
+$main-title: $color-3;
+$secondary-title: $color-5;
+$titles: $neutral-2;
+$paragraph: $neutral-2;
+$link: $neutral-2;
+$icon: $neutral-2; 
+
+//hover
+$link-hover: $color-3;
+$skill-hover: $color-5;
+
+//button
+$btn-search: $color-1;
+$btn-search-hover: rgba(0, 0, 0, 0.6);
+
+// background
+$header-bg: $neutral-1;
+$card-bg: $color-1;
+$input: $color-9;
+

@@ -1,0 +1,112 @@
+@use 'variables' as v;
+@use 'colours' as c;
+@use 'mixins' as m;
+
+body{
+    font-family:v.$secondary-font;
+}
+h1, h2, h3, h4 {
+    font-family: v.$main-font;
+    text-align: center;    
+    color: c.$secondary-title;
+}
+h1 {
+    color: c.$main-title;
+    font-size: 1.8rem;
+    @include m.telefono{
+        font-size: 3rem;
+    }
+    @include m.tablet{
+        font-size: 3.5rem;
+    }
+    @include m.desktop{
+        font-size: 4rem;
+    }
+}
+h2 {
+    font-size: 2.4rem;
+    @include m.telefono{
+        font-size: 2.8rem;
+    }
+    @include m.tablet{
+        font-size: 3.2rem;
+    }
+    @include m.desktop{
+        font-size: 3.6rem;
+    }
+}
+h3 {
+    font-size: 2.2rem;
+    @include m.telefono{
+        font-size: 2.6rem;
+    }
+    @include m.tablet{
+        font-size: 2.8rem;
+    }
+    @include m.desktop{
+        font-size: 3rem;
+    }
+}
+h4 {
+    font-size: 1.6rem;
+    @include m.telefono{
+        font-size: 2rem;
+    }
+    @include m.tablet{
+        font-size: 2.2rem;
+    }
+    @include m.desktop{
+        font-size: 2.4rem;
+    }
+}
+p, span {
+    font-family: v.$secondary-font;
+    line-height: 1.5rem;
+    color: c.$paragraph;
+    font-size: 1rem;
+    @include m.telefono{
+        font-size: 1.4rem;
+    }
+    @include m.tablet{
+        font-size: 1.6rem;
+    }
+    @include m.macbook_air{
+        font-size: 1.8rem;
+    }
+}
+a {
+    font-family: v.$link-font;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    color: c.$link;    
+    transition-property: color;
+    transition-duration: .5s;
+    &:hover {
+        cursor: pointer;
+        color: c.$link-hover;
+    } 
+    @include m.telefono{
+        font-size: 1.4rem;
+    }
+    @include m.tablet{
+        font-size: 1.6rem;
+    }
+}
+ul {
+    list-style: none;
+}
+li{
+    font-size: 1.2rem;
+    text-align: justify;
+    line-height: 2.5rem;
+    @include m.telefono{
+        font-size: 1.4rem;
+    }
+    @include m.tablet{
+        font-size: 1.6rem;
+    }
+    @include m.desktop{
+        font-size: 1.8rem;
+    }
+}

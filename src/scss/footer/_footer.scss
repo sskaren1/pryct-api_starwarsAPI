@@ -1,0 +1,15 @@
+@use "base/variables" as v;
+@use "base/colours" as c;
+@use "base/mixins" as m;
+
+
+.footer__attribution {
+  p {
+    color: c.$color-3;
+    text-align: center;
+    a {
+      font-family: v.$secondary-font;
+      color: c.$color-5;
+    }
+  }
+}

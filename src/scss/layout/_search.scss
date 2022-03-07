@@ -1,0 +1,25 @@
+@use "base/variables" as v;
+@use "base/colours" as c;
+@use "base/mixins" as m;
+
+.search{
+    margin: calc(v.$margin_elemt*2) 0 calc(v.$margin_elemt*3);
+
+    .search__form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        input[type=text]{
+            width: 30rem;
+            padding: calc(v.$padding_elemt/2);
+            border-radius: 0.5rem;
+            border: none;
+            margin-right: v.$margin_elemt;
+            background-color: c.$input;
+            font-size: 1.6rem
+        }
+
+        @include m.btn(c.$btn-search, c.$neutral-2, block, c.$btn-search-hover);
+    }
+}

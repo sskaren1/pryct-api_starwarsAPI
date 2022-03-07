@@ -1,0 +1,84 @@
+/** Media Queries **/
+@use 'variables' as v;
+@use 'colours' as c;
+
+// Media queries
+@mixin telefono {
+    @media only screen and (min-width: v.$telefono) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media only screen and (min-width: v.$tablet) {
+        @content;
+    }
+}  
+@mixin desktop {
+    @media only screen and (min-width: v.$desktop) {
+        @content;
+    }
+}
+@mixin macbook_air {
+    @media only screen and (min-width: v.$macbook_air) {
+        @content;
+    }
+}
+@mixin macbook_pro_13 {
+    @media only screen and (min-width: v.$macbook_pro_13) {
+        @content;
+    }
+}
+
+//Buttons
+@mixin btn($bg-color:transparent, $color, $display, $bg-color-hover) {
+    button{
+        display: $display;
+        margin: 1rem 0 1rem;
+        padding: 0.8rem 1.5rem;
+        border:none;
+        border-radius: 1rem;   
+        background-color: $bg-color;
+        text-align: center;
+        text-decoration: none;
+        color: $color;
+        font-size: 1.6rem;
+        cursor: pointer;
+        &:hover{
+            background-color: $bg-color-hover;
+        }
+        @include telefono{
+            padding: 0.9rem 2rem;
+        }
+        @include tablet{
+            padding: 1rem 3rem;
+            margin: 0;
+        }
+    }
+}
+
+// Grid
+@mixin grid-columns($columns, $spacing) {
+    grid-template-rows: unset;
+    display: grid;
+    column-gap: $spacing;
+    grid-template-columns: repeat($columns, 1fr);
+    align-items: center;
+    justify-items: center;
+    grid-auto-flow: column;
+}
+@mixin grid-rows($rows,$spacing) {
+    grid-template-columns: unset;
+    display:grid;
+    row-gap: $spacing;
+    grid-template-rows: repeat($rows, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+@mixin grid-col-row($columns,$rows,$spacing) {
+    display:grid;
+    gap: $spacing;
+    grid-template-columns: repeat($columns, 1fr);
+    grid-template-rows: repeat($rows, 1fr);
+    align-items: center;//para centrar verticalmente
+    justify-items: center;//para centrar horizontalmente
+}

@@ -1,0 +1,31 @@
+@use "base/variables" as v;
+@use "base/colours" as c;
+@use "base/mixins" as m;
+
+.card{
+    width: 30rem;
+    background-color: c.$card-bg;
+    border-radius: 1rem;
+    margin: 0 auto;
+
+    .card__container{
+        padding: calc(v.$padding_elemt*2) 0;
+    }
+    .card__image{
+        width: 15rem;
+        height: 15rem;
+        margin: 0 auto calc(v.$margin_elemt/2);
+        img{
+            border-radius: 50%;
+        }
+    }
+    .card__body{
+        text-align: center;
+    }
+    .card__name{
+        margin-bottom: v.$margin_elemt;
+    }
+    .card__planet{
+        margin-bottom: v.$margin_elemt;
+    }
+}

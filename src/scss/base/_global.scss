@@ -1,0 +1,45 @@
+@use 'variables' as v;
+@use 'colours' as c;
+@use 'mixins' as m;
+
+html{
+    font-size: 62.5%;/* 1 rem = 10px */
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;//para que al crear una caja al poner un width tbn se considere su padding y margin como parte de este
+}
+*,*:before, *:after{
+    box-sizing: inherit;/*inherit:hereda del elemento padre*/
+    margin:0;
+    padding: 0;
+}
+body{
+    background-image: url('../img/1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+// clase de sweetAlert
+.swal2-height-auto{
+    height: 100vh;
+}
+[class$="__container"] {
+    width: 90%;
+    max-width: 1200px;
+    margin:0 auto;
+    @include m.macbook_air{
+        max-width: 1900px;;
+    }
+    @include m.macbook_pro_13{
+        max-width: 2800px;
+    }
+}
+img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height:inherit;
+    margin: 0 auto;
+    text-align: center;
+}
